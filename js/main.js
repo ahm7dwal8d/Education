@@ -27,7 +27,7 @@ setInterval(function () {
 
 let About = document.querySelector(".about")
 
-let AboutOffsetTop = About.offsetTop ;
+let AboutOffsetTop = About.offsetTop;
 
 let AboutSpan = document.querySelectorAll(".about .box span")
 
@@ -36,10 +36,10 @@ let Started = false;
 function StartCounter(el) {
 
     let goal = el.dataset.goal;
-
+    
     let counte = setInterval(function () {
         el.textContent++
-
+        
         if (el.textContent === goal) {
             clearInterval(counte)
         }
@@ -54,11 +54,13 @@ let Header = document.querySelector(".header")
 
 let ButtonToTop = document.querySelector(".to-top")
 
+console.log(ButtonToTop)
+
 
 window.onscroll = function () {
-
+    
     // About Counte
-
+    
     if (window.scrollY >= AboutOffsetTop) {
 
         if (!Started) {
@@ -76,7 +78,7 @@ window.onscroll = function () {
 
 // Button To Top 
 
-    if (window.scrollY > 100) {
+    if (window.scrollY >= 100) {
 
         Header.classList.add("active")
 

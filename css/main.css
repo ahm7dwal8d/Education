@@ -91,6 +91,7 @@ html {
 .header .container ul {
     display: flex;
     align-items: center;
+    z-index: 10000;
 }
 .header .container ul li a {
     padding: 10px;
@@ -472,7 +473,7 @@ span.to-top {
     -ms-transition: var(--main-transition);
     -o-transition: var(--main-transition);
 }
-span.to-top.active {
+.to-top.active {
     bottom: 60px;
     opacity: 1;
 }
